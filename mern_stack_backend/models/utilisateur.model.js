@@ -2,19 +2,27 @@ const mongoose = require('mongoose');
 
 
 const utilisateurSchema = new mongoose.Schema({
-  nom: {
+  email: {
     type: String,
     required: true
     // unique: true,
     // trim: true,
     // minlength: 3
   },
-  prenom :{
+  motDePasse :{
     type: String,
     required: true
   },
-  age : {
-    type: Number,
+  dateNaissance : {
+    type: Date,
+    required:true
+  },
+  nom:{
+    type:String,
+    required:true
+  },
+  prenom:{
+    type:String,
     required:true
   }
 } );
